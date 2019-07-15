@@ -38,10 +38,12 @@ void Tracker::addPiece(int *x, int *y) {
 // used for moving pieces around
 // function for updating board
 void Tracker::updatePiece(int *currentPosX, int *currentPosY, int *newPosX, int *newPosY) {
-  for (int i = 0; i < positionOfPieces.size(); i++) {
-    if (*currentPosX == positionOfPieces[i][0] && *currentPosY == positionOfPieces[i][1]) {
-      positionOfPieces[i][0] = *newPosX;
-      positionOfPieces[i][0] = *newPosY;
+  if (!isEmpty(currentPosX, currentPosY)) {
+    for (int i = 0; i < positionOfPieces.size(); i++) {
+      if (*currentPosX == positionOfPieces[i][0] && *currentPosY == positionOfPieces[i][1]) {
+        positionOfPieces[i][0] = *newPosX;
+        positionOfPieces[i][0] = *newPosY;
+      }
     }
   }
 }
