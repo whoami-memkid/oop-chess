@@ -1,9 +1,6 @@
 #include "../headers/Tracker.h"
 
-<<<<<<< HEAD
 // returns address of vector
-=======
->>>>>>> 27aea31bf82eaa563ae38ded20915eb33e44e082
 const std::vector<std::vector<int> > &Tracker::retVec() const {
   return positionOfPieces;
 };
@@ -25,7 +22,6 @@ bool Tracker::isEmpty(int *x, int *y) {
 // if there is a piece on
 // specific spot
 void Tracker::addPiece(int *x, int *y) {
-<<<<<<< HEAD
   if (pieceInbounds(x, y)) {
     if (isEmpty(x, y)) {
       positionOfPieces.push_back({*x, *y});
@@ -35,12 +31,6 @@ void Tracker::addPiece(int *x, int *y) {
     }
   } else {
     printf("(%d, %d) is out of bounds!", *x, *y);
-=======
-  if (isEmpty(x, y)) {
-    positionOfPieces.push_back({*x, *y});
-  } else {
-    printf("There is a piece at location (%d, %d) already!\n", *x, *y);
->>>>>>> 27aea31bf82eaa563ae38ded20915eb33e44e082
     exit(-1);
   }
 }
@@ -55,7 +45,6 @@ void Tracker::updatePiece(int *currentPosX, int *currentPosY, int *newPosX, int 
     }
   }
 }
-<<<<<<< HEAD
 
 bool Tracker::pieceInbounds(int *x, int *y) {
   if((*x > -1 && *x < 8) && (*y > -1 && *y < 8)) {
@@ -63,5 +52,3 @@ bool Tracker::pieceInbounds(int *x, int *y) {
   }
   return false;
 }
-=======
->>>>>>> 27aea31bf82eaa563ae38ded20915eb33e44e082
