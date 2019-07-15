@@ -6,6 +6,8 @@ int main() {
   Pawn p1;
   Pawn p2;
   Piece *pPawn1 = &p1;
+  Piece *pPawn2 = &p2;
+
   Tracker t;
 
 
@@ -16,18 +18,29 @@ int main() {
 
   uint8_t setColor;
   uint8_t *pSColor;
+
   pSColor = &setColor;
   *pSColor = 1;
+
   uint8_t getColor;
   uint8_t *pGColor;
+
   pPawn1->setPosX(pX);
   pPawn1->setPosY(pY);
 
+  *pX = 3;
+  *pY = 4;
+  pPawn2->setPosX(pX);
+  pPawn2->setPosY(pY);
+
+
   pPawn1->setPieceColor(pSColor);
+  pPawn2->setPieceColor(pSColor);
+
   pGColor = pPawn1->getPieceColor();
 
   t.addPiece(pPawn1->getPosX(), pPawn1->getPosY());
-  //t.addPiece(pPawn1->getPosX(), pPawn1->getPosY());
+  t.addPiece(pPawn2->getPosX(), pPawn2->getPosY());
 
 
   std::vector<std::vector<int> > result = t.retVec();
