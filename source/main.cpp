@@ -27,7 +27,7 @@ int main() {
   pGColor = pPawn1->getPieceColor();
 
   t.addPiece(pPawn1->getPosX(), pPawn1->getPosY());
-  t.addPiece(pPawn1->getPosX(), pPawn1->getPosY());
+  //t.addPiece(pPawn1->getPosX(), pPawn1->getPosY());
 
 
   std::vector<std::vector<int> > result = t.retVec();
