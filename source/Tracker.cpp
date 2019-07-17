@@ -29,11 +29,11 @@ void Tracker::addPiece(int *x, int *y) {
       // adds position to the vector
       positionOfPieces.push_back({*x, *y});
     } else {
-      printf("Position (%d, %d)", *x, *y);
+      printf("Position (%d, %d)\n", *x, *y);
       exit(-1);
     }
   } else {
-    printf("(%d, %d) is out of bounds!", *x, *y);
+    printf("(%d, %d) is out of bounds!\n", *x, *y);
     exit(-1);
   }
 }

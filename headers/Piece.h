@@ -1,4 +1,5 @@
 #include "main_headers.h"
+#include "Tracker.h"
 
 #ifndef PIECE_H
 #define PIECE_H
@@ -20,17 +21,19 @@ public:
   void setPosY(int *y);
   int *getPosY();
 
-  // Captures
-  // void captures();
-  // int *getCaptures();
+  // set/get tracker
+  void setTracker(Tracker &refTracker);
+  Tracker *getTracker();
+
 
   // Test Func()
   void say();
 
+
   // pure virtual
   // Makes the class abstract
   // Move every piece has a different move function
-  virtual void move(int *x, int *y) = 0;
+  virtual void move() = 0;
 
 private:
   // vars & pointers
@@ -47,10 +50,14 @@ private:
   int y;
   int *pPosX = &x;
   int *pPosY = &y;
+  int tmpX;
+  int tmpY;
+  int *pTmpX = &tmpX;
+  int *pTmpY = &tmpY;
 
-  // Pieces captured
-  int captures = 0;
-  int *pCaptures = &captures;
+  // Reference to the tracker class
+  Tracker *t;
+
 };
 
 #endif /* PIECE_H */

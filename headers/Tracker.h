@@ -26,7 +26,7 @@ public:
   // update pieces on board
   void updatePiece(int *currentPosX, int *currentPosY, int *newPosX, int *newPosY);
 
-  // checks if the piece is inbounds 
+  // checks if the piece is inbounds
   bool pieceInbounds(int *x, int *y);
 };
 

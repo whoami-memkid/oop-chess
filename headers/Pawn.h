@@ -7,7 +7,7 @@ class Pawn : public Piece {
 public:
   // implementation of
   // pure virtual func()
-  void move(int *x, int *y);
+  void move();
 };
 
 #endif /* PAWN_H */

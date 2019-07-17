@@ -52,13 +52,15 @@ int *Piece::getPosY() {
   return pPosY;
 }
 
-// void Piece::captures() {
-//   *pCaptures++;
-// }
+// init the tracker variable
+void Piece::setTracker(Tracker &refTracker) {
+  t = &refTracker;
+}
 
-// int *Piece::getCaptures() {
-//   return pCaptures;
-// }
+// get Ref to the Tracker
+Tracker *Piece::getTracker() {
+  return t;
+}
 
 // Test function to
 // make sure that class
