@@ -1,3 +1,3 @@
-# OOP-chess
+# OOP-chess-framework
 
-Slowly working on the program, it is not done yet.
+Framework for building a chess game
