@@ -21,7 +21,7 @@ public:
   bool isEmpty(int *x, int *y);
 
   // add a piece to the board
-  void addPiece(int *x, int *y);
+  void addPiece(int *x, int *y, uint8_t *pColor);
 
   // update pieces on board
   void updatePiece(int *currentPosX, int *currentPosY, int *newPosX, int *newPosY);

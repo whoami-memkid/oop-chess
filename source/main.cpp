@@ -1,7 +1,6 @@
 #include "../headers/Pawn.h"
 #include "../headers/Tracker.h"
 
-
 int main() {
   Pawn p1;
   Pawn p2;
@@ -30,8 +29,9 @@ int main() {
   pPawn1->setPosX(pX);
   pPawn1->setPosY(pY);
 
-  *pX = 9;
-  *pY = 8;
+  *pX = 3;
+  *pY = 4;
+
   pPawn2->setPosX(pX);
   pPawn2->setPosY(pY);
 
@@ -39,14 +39,11 @@ int main() {
   pPawn1->setPieceColor(pSColor);
   pPawn2->setPieceColor(pSColor);
 
+  t.addPiece(pPawn1->getPosX(), pPawn1->getPosY(), pPawn1->getPieceColor());
+  t.addPiece(pPawn2->getPosX(), pPawn2->getPosY(), pPawn2->getPieceColor());
+
   pPawn1->move();
   pPawn2->move();
-
-  pGColor = pPawn1->getPieceColor();
-
-  t.addPiece(pPawn1->getPosX(), pPawn1->getPosY());
-  // t.addPiece(pPawn2->getPosX(), pPawn2->getPosY());
-
 
   std::vector<std::vector<int> > result = t.retVec();
 

@@ -50,10 +50,6 @@ private:
   int y;
   int *pPosX = &x;
   int *pPosY = &y;
-  int tmpX;
-  int tmpY;
-  int *pTmpX = &tmpX;
-  int *pTmpY = &tmpY;
 
   // Reference to the tracker class
   Tracker *t;

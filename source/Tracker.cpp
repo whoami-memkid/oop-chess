@@ -21,15 +21,15 @@ bool Tracker::isEmpty(int *x, int *y) {
 // uses isEmpty to track
 // if there is a piece on
 // specific spot
-void Tracker::addPiece(int *x, int *y) {
+void Tracker::addPiece(int *x, int *y, uint8_t *pColor) {
   // checks if it's inbounds
   if (pieceInbounds(x, y)) {
     // makes sure it is not empty
     if (isEmpty(x, y)) {
       // adds position to the vector
-      positionOfPieces.push_back({*x, *y});
+      positionOfPieces.push_back({*x, *y, *pColor});
     } else {
-      printf("Position (%d, %d)\n", *x, *y);
+      printf("Position (%d, %d) is not empty\n", *x, *y);
       exit(-1);
     }
   } else {
