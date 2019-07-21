@@ -4,6 +4,8 @@
 int main() {
   Pawn p1;
   Pawn p2;
+  Pawn p3;
+
   Piece *pPawn1 = &p1;
   Piece *pPawn2 = &p2;
 
