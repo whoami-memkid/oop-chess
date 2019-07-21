@@ -11,3 +11,5 @@ You need to initialize all the pieces to the board values from (0, 0) to (7, 7).
 You need to implement the move function for all the classes.
 
 I haven't done anything to the move functions, so you'll have to implement how the pieces move.
+
+I'm taking a break from this project...
